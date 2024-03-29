@@ -1,10 +1,11 @@
 import { HeroBanner } from "@/components/banner/HereBanner";
+import { InfiniteMoving } from "@/components/movingImg/InfiniteMoving";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <section className="relative h-[100%]">
+      <section className="relative h-[100%] overflow-hidden">
         <div className="container">
           <HeroBanner />
         </div>
@@ -31,9 +32,17 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-[80px]">
+      <section className="py-[50px] bg-[#17181F]">
         <div className="container">
-          <h1>Section Title</h1>
+          <h2 className="text-[36px] text-white text-center font-bold w-[550px] m-auto mb-5">
+            “Join a community of industry leading professionals”
+          </h2>
+        </div>
+        <InfiniteMoving />
+      </section>
+      <section className="py-[80px] relative">
+        <div className="container">
+          
         </div>
       </section>
     </>

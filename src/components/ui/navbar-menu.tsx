@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const transition = {
   type: "spring",
@@ -41,18 +41,35 @@ export const Menu = ({
   setActive: (item: string | null) => void;
   children: React.ReactNode;
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav
         onMouseLeave={() => setActive(null)}
         className="relative w-[100%] shadow-input flex
-        justify-between pl-5 py-4"
+    justify-between pl-5 py-4"
       >
         <Link href="/">
           <Image src="/svg/Logo.svg" width={130} height={50} alt="Logo" />
         </Link>
-        <div className="flex items-center gap-8">{children}</div>
-        <div className="flex items-center gap-4">
+        <div className="md:flex hidden items-center gap-8">{children}</div>
+        {isOpen && (
+          <div className="flex flex-col items-left w-[250px] h-screen fixed top-[75px] left-0 bg-[#242732] py-10 px-[30px] gap-4 md:hidden">
+            {children}
+            <button className="relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white backdrop-blur-3xl">
+                Sign In
+              </span>
+            </button>
+          </div>
+        )}
+        <div className="md:flex hidden items-center gap-4">
           <button className="relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white backdrop-blur-3xl">
@@ -60,6 +77,42 @@ export const Menu = ({
             </span>
           </button>
         </div>
+        <button
+          onClick={toggleMenu}
+          className="block md:hidden text-gray-300 hover:text-white focus:outline-none"
+        >
+          {!isOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          )}
+        </button>
       </nav>
     </>
   );

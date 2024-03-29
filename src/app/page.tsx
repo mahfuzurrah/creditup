@@ -41,9 +41,7 @@ export default function Home() {
         <InfiniteMoving />
       </section>
       <section className="py-[80px] relative">
-        <div className="container">
-          
-        </div>
+        <div className="container"></div>
       </section>
     </>
   );

@@ -34,7 +34,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "w-full h-full bg-[#1B1A1E] border border-[#ffffff23] p-6 rounded-2xl z-10",
+        "w-full h-full bg-[#1B1A1E] border border-[#ffffff23] p-6 rounded-2xl z-10 mt-4  sm:mt-0",
         className
       )}
     >

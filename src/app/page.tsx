@@ -81,9 +81,9 @@ export default function Home() {
               height={700}
               src="/img/client_bg.png"
               alt=""
-              className="mt-20 m-auto"
+              className="mt-20 m-auto sm:block hidden "
             />
-            <div className="flex flex-wrap items-center justify-between w-full absolute top-0">
+            <div className="flex flex-wrap items-center justify-between w-full sm:absolute top-0">
               {ClientsData.map((client) => (
                 <ClientCard key={client.id} client={client} />
               ))}

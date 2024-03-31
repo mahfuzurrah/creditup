@@ -49,8 +49,27 @@ body {
     background: #17181f;
   }
 
+  .right {
+    margin-left: auto;
+  }
+
   .card_one {
     animation: animate 1.5s ease-in-out infinite alternate;
+  }
+  .card_two {
+    animation: animate 2s ease-in-out infinite alternate;
+  }
+  .card_three {
+    animation: animate 1.4s ease-in-out infinite alternate;
+  }
+  .card_four {
+    animation: animate 1.7s ease-in-out infinite alternate;
+  }
+  .card_five {
+    animation: animate 2.5s ease-in-out infinite alternate;
+  }
+  .card_six {
+    animation: animate 2s ease-in-out infinite alternate;
   }
 
   @keyframes animate {

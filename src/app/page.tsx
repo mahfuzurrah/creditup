@@ -1,4 +1,5 @@
 import { HeroBanner } from "@/components/banner/HereBanner";
+import { WorkCard } from "@/components/card/WorkCard";
 import { CardHoverEffect } from "@/components/card/CardHoverEffect";
 import ClientCard from "@/components/card/ClientCard";
 import ClientsData from "@/components/card/ClientsData";
@@ -82,11 +83,29 @@ export default function Home() {
               alt=""
               className="mt-20 m-auto"
             />
-            <div className="flex items-center justify-between w-full absolute top-0">
+            <div className="flex flex-wrap items-center justify-between w-full absolute top-0">
               {ClientsData.map((client) => (
                 <ClientCard key={client.id} client={client} />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-[80px] relative">
+        <div className="container">
+          <div className="flex items-start justify-center w-full">
+            <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
+              <h1 className="combined">How does this work?</h1>
+              <h1 className="combined">How does this work?</h1>
+            </div>
+            <div className="w-[650px] m-auto text-center">
+              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+                How does this work?
+              </h2>
+            </div>
+          </div>
+          <div className="mt-8">
+            <WorkCard />
           </div>
         </div>
       </section>

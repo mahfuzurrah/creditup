@@ -1,5 +1,3 @@
-// InfiniteMoving.tsx
-
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteMoving() {

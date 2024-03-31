@@ -1,4 +1,7 @@
 import { HeroBanner } from "@/components/banner/HereBanner";
+import { CardHoverEffect } from "@/components/card/CardHoverEffect";
+import ClientCard from "@/components/card/ClientCard";
+import ClientsData from "@/components/card/ClientsData";
 import { InfiniteMoving } from "@/components/movingImg/InfiniteMoving";
 import Image from "next/image";
 
@@ -32,16 +35,60 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-[50px] bg-[#17181F]">
+      <section className="py-[50px] bg">
         <div className="container">
-          <h2 className="text-[36px] text-white text-center font-bold w-[550px] m-auto mb-5">
-            “Join a community of industry leading professionals”
-          </h2>
+          <div className="max:w-[550px] m-auto mb-5">
+            <h2 className="text-[36px] text-white text-center font-bold">
+              “Join a community of industry leading professionals”
+            </h2>
+          </div>
         </div>
         <InfiniteMoving />
       </section>
       <section className="py-[80px] relative">
-        <div className="container"></div>
+        <div className="container">
+          <div className="flex items-start justify-center w-full">
+            <div className="flex flex-row items-center justify-center absolute top-[50px] -z-10">
+              <h1 className="combined">Benefits</h1>
+              <h1 className="combined">Benefits</h1>
+            </div>
+            <div className="w-[550px] m-auto text-center">
+              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+                Benefits
+              </h2>
+            </div>
+          </div>
+          <CardHoverEffect />
+        </div>
+      </section>
+      <section className="py-[80px] relative bg">
+        <div className="container">
+          <div className="flex items-start justify-center w-full">
+            <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
+              <h1 className="combined">Voices of clients</h1>
+              <h1 className="combined">Voices of clients</h1>
+            </div>
+            <div className="w-[550px] m-auto text-center">
+              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+                Voices Of Clients
+              </h2>
+            </div>
+          </div>
+          <div className="relative w-full">
+            <Image
+              width={700}
+              height={700}
+              src="/img/client_bg.png"
+              alt=""
+              className="mt-20 m-auto"
+            />
+            <div className="flex items-center justify-between w-full absolute top-0">
+              {ClientsData.map((client) => (
+                <ClientCard key={client.id} client={client} />
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <InfiniteMoving />
       </section>
-      <section className="py-[80px] relative">
+      <section className="py-[80px] relative overflow-hidden">
         <div className="container">
           <div className="flex items-start justify-center w-full">
             <div className="flex flex-row items-center justify-center absolute top-[50px] -z-10">
@@ -62,7 +62,7 @@ export default function Home() {
           <CardHoverEffect />
         </div>
       </section>
-      <section className="py-[80px] relative bg">
+      <section className="py-[80px] relative bg overflow-hidden">
         <div className="container">
           <div className="flex items-start justify-center w-full">
             <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-[80px] relative">
+      <section className="py-[80px] relative overflow-hidden">
         <div className="container">
           <div className="flex items-start justify-center w-full">
             <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">

@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -22,7 +24,9 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
   ],
+  presets: [require("keep-react/preset")],
   darkMode: "class",
   theme: {
     container: {

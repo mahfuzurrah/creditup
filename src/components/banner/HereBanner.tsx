@@ -9,7 +9,7 @@ export function HeroBanner() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="w-full text-[42px] lg:text-[65px] md:text-[56px] font-bold mt-1 text-white dark:text-white leading-none">
+            <h1 className="w-full text-[32px] sm:text-[42px] lg:text-[60px] md:text-[56px] font-bold mt-1 text-white dark:text-white leading-none uppercase">
               CUT your creditor repayments in half, whilst improving your credit
               worthiness
             </h1>
@@ -27,7 +27,7 @@ export function HeroBanner() {
         }
       >
         <Image
-          src={`/img/Hero_Banner.png`}
+          src={`/img/Hero_Banner.webp`}
           alt="hero"
           height={720}
           width={1350}

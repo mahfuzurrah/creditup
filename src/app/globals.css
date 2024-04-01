@@ -77,4 +77,8 @@ body {
       transform: translateX(-20px);
     }
   }
+
+  .rounded-none.border-b.border-metal-100 {
+    padding: 20px !important;
+  }
 }

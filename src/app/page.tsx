@@ -1,15 +1,16 @@
+import { Faq } from "@/components/accordion/Faq";
 import { HeroBanner } from "@/components/banner/HereBanner";
-import { WorkCard } from "@/components/card/WorkCard";
 import { CardHoverEffect } from "@/components/card/CardHoverEffect";
 import ClientCard from "@/components/card/ClientCard";
 import ClientsData from "@/components/card/ClientsData";
+import { WorkCard } from "@/components/card/WorkCard";
 import { InfiniteMoving } from "@/components/movingImg/InfiniteMoving";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <section className="relative h-[100%] overflow-hidden">
+      <section className="relative h-[100%] overflow-hidden" id="home">
         <div className="container">
           <HeroBanner />
         </div>
@@ -36,10 +37,10 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-[50px] bg">
+      <section className="py-[50px] bg" id="benefits">
         <div className="container">
-          <div className="max:w-[550px] m-auto mb-5">
-            <h2 className="text-[36px] text-white text-center font-bold">
+          <div className="w-full sm:w-[550px] m-auto mb-5">
+            <h2 className="text-[30px] sm:text-[36px] text-white text-center font-bold">
               “Join a community of industry leading professionals”
             </h2>
           </div>
@@ -54,7 +55,7 @@ export default function Home() {
               <h1 className="combined">Benefits</h1>
             </div>
             <div className="w-[550px] m-auto text-center">
-              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
                 Benefits
               </h2>
             </div>
@@ -62,7 +63,7 @@ export default function Home() {
           <CardHoverEffect />
         </div>
       </section>
-      <section className="py-[80px] relative bg overflow-hidden">
+      <section className="py-[80px] h-full relative bg overflow-hidden">
         <div className="container">
           <div className="flex items-start justify-center w-full">
             <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
@@ -70,12 +71,12 @@ export default function Home() {
               <h1 className="combined">Voices of clients</h1>
             </div>
             <div className="w-[550px] m-auto text-center">
-              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
                 Voices Of Clients
               </h2>
             </div>
           </div>
-          <div className="relative w-full">
+          <div className="relative w-full mt-0 md:mt-[-40px]">
             <Image
               width={700}
               height={700}
@@ -95,17 +96,35 @@ export default function Home() {
         <div className="container">
           <div className="flex items-start justify-center w-full">
             <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
-              <h1 className="combined">How does this work?</h1>
-              <h1 className="combined">How does this work?</h1>
+              <h1 className="combined">How does this work</h1>
+              <h1 className="combined">How does this work</h1>
             </div>
-            <div className="w-[650px] m-auto text-center">
-              <h2 className="text-[36px] md:text-[56px] text-white text-center font-bold">
+            <div className="text-center">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
                 How does this work?
               </h2>
             </div>
           </div>
           <div className="mt-8">
             <WorkCard />
+          </div>
+        </div>
+      </section>
+      <section className="py-[80px] relative overflow-hidden">
+        <div className="container">
+          <div className="flex items-start justify-center w-full">
+            <div className="flex flex-row items-center justify-center absolute top-[50px] -z-10">
+              <h1 className="combined">Frequently asked questions</h1>
+              <h1 className="combined">Frequently asked questions</h1>
+            </div>
+            <div className="text-center">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
+                HAVE QUESTIONS?
+              </h2>
+            </div>
+          </div>
+          <div className="mt-8 z-10">
+            <Faq />
           </div>
         </div>
       </section>

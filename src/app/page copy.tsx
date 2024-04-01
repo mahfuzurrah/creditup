@@ -75,8 +75,33 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="w-full mt-5">
+          <div className="relative w-full mt-0 md:mt-[-40px]">
+            <Image
+              width={700}
+              height={700}
+              src="/img/client_bg.png"
+              alt=""
+              className="mt-20 m-auto sm:block hidden "
+            />
             <Testimonial/>
+          </div>
+        </div>
+      </section>
+      <section className="py-[80px] relative overflow-hidden">
+        <div className="container">
+          <div className="flex items-start justify-center w-full">
+            <div className="flex flex-row items-center justify-center absolute top-[50px] -z-1">
+              <h1 className="combined">How does this work</h1>
+              <h1 className="combined">How does this work</h1>
+            </div>
+            <div className="text-center">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
+                How does this work?
+              </h2>
+            </div>
+          </div>
+          <div className="mt-8">
+            <WorkCard />
           </div>
         </div>
       </section>

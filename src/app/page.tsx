@@ -42,23 +42,21 @@ export default function Home() {
               “Join a community of industry leading professionals”
             </h2>
           </div> */}
-          <div className="flex items-center gap-4">
-            <div className="text-center w-full p-[40px] rounded-xl bg-[#242732]">
+          <div className="flex items-center flex-wrap md:flex-nowrap gap-4">
+            <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">
                 Unfair lending claims paid out
               </h4>
               <h2 className="text-[36px] font-bold mt-3">£2.3 million </h2>
             </div>
-            <div className="text-center w-full p-[40px] rounded-xl bg-[#242732]">
+            <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">
-              Payment arrangements in place
+                Payment arrangements in place
               </h4>
               <h2 className="text-[36px] font-bold mt-3">1600</h2>
             </div>
-            <div className="text-center w-full p-[40px] rounded-xl bg-[#242732]">
-              <h4 className="text-[22px] font-semibold">
-              Donated to charity 
-              </h4>
+            <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
+              <h4 className="text-[22px] font-semibold">Donated to charity</h4>
               <h2 className="text-[36px] font-bold mt-3">£305k</h2>
             </div>
           </div>

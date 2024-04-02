@@ -2,6 +2,7 @@ import { Faq } from "@/components/accordion/Faq";
 import { HeroBanner } from "@/components/banner/HereBanner";
 import { CardHoverEffect } from "@/components/card/CardHoverEffect";
 import { Testimonial } from "@/components/carosol/Testimonial";
+import NumberCounter from "@/components/counter/NumberCounter";
 import Image from "next/image";
 
 export default function Home() {
@@ -36,28 +37,36 @@ export default function Home() {
       </section>
       <section className="py-[50px] bg" id="benefits">
         <div className="container">
-          {/* 
           <div className="w-full sm:w-[550px] m-auto mb-5">
             <h2 className="text-[30px] sm:text-[36px] text-white text-center font-bold">
-              “Join a community of industry leading professionals”
+              Change To Real Time Strategies
             </h2>
-          </div> */}
+          </div>
           <div className="flex items-center flex-wrap md:flex-nowrap gap-4">
             <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">
                 Unfair lending claims paid out
               </h4>
-              <h2 className="text-[36px] font-bold mt-3">£2.3 million </h2>
+              <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
+                £
+                <NumberCounter endValue={250000} duration={2000} />
+                million{" "}
+              </h2>
             </div>
             <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">
                 Payment arrangements in place
               </h4>
-              <h2 className="text-[36px] font-bold mt-3">1600</h2>
+              <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
+                <NumberCounter endValue={1600} duration={2000} />
+              </h2>
             </div>
             <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">Donated to charity</h4>
-              <h2 className="text-[36px] font-bold mt-3">£305k</h2>
+              <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
+                £
+                <NumberCounter endValue={305} duration={2000} />K
+              </h2>
             </div>
           </div>
         </div>

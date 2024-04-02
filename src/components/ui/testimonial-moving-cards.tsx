@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import Image from "next/image";
+import Image  from "next/image";
 import { useEffect, useRef } from "react";
 
 interface TestimonialItem {
@@ -91,9 +91,9 @@ export const TestimonialMovingCards = ({
             <blockquote>
               <Image
                 src={item.img as string}
+                alt="Description of the image"
                 width={50}
                 height={50}
-                alt=""
                 className="relative z-20 leading-[1.6] text-gray-100 text-[16px] font-medium rounded-lg"
               />
               <div className="relative z-20 my-6 flex flex-row items-center">

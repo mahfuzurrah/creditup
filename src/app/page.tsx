@@ -12,7 +12,7 @@ export default function Home() {
         <div className="container">
           <HeroBanner />
         </div>
-        <div className="absolute left-[-35%] top-0 -z-40">
+        { /*<div className="absolute left-[-35%] top-0 -z-40">
           <Image
             src={`/svg/ex_bg.svg`}
             alt="hero"
@@ -28,8 +28,8 @@ export default function Home() {
             height={720}
             width={950}
             draggable={false}
-          />
-        </div>
+          /> 
+          </div>*/}
       </section>
       <section className="py-[50px] bg" id="benefits">
         <div className="container">

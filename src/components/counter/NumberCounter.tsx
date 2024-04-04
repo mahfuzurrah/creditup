@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
+import ScrollTrigger from "@/components/counter/ScrollTrigger";
 
 interface NumberCounterProps {
   end: number;

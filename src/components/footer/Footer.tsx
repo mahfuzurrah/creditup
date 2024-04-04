@@ -77,7 +77,7 @@ function Footer() {
           <span className="text-[16px] text-white sm:text-center dark:text-gray-400">
             © 2023{" "}
             <Link href="#" className="hover:underline">
-              Tailwind CSS
+              CREADITUP
             </Link>
             . All Rights Reserved.
           </span>

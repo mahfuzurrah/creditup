@@ -14,19 +14,21 @@ export default function Home() {
         </div>
         <div className="absolute left-[-35%] top-0 -z-40">
           <Image
-            src={`/svg/ex_bg.svg`}
+            src="/svg/ex_bg.svg"
             alt="hero"
             height={720}
             width={950}
+            className="w-[50px]"
             draggable={false}
           />
         </div>
         <div className="absolute right-[-35%] top-0 -z-40">
           <Image
-            src={`/svg/ex_bg.svg`}
+            src="/svg/ex_bg.svg"
             alt="hero"
             height={720}
             width={950}
+            className="w-[50px]"
             draggable={false}
           />
         </div>
@@ -45,12 +47,7 @@ export default function Home() {
               </h4>
               <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
                 £
-                <NumberCounter
-                  end={250000}
-                  start={100}
-                  duration={3}
-                  decimals={2}
-                />
+                <NumberCounter endValue={250000.00} duration={4000} />
                 million
               </h2>
             </div>
@@ -59,13 +56,13 @@ export default function Home() {
                 Payment arrangements in place
               </h4>
               <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
-                <NumberCounter end={1650} start={100} duration={3} />
+                <NumberCounter endValue={1600} duration={4000} />
               </h2>
             </div>
             <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">
               <h4 className="text-[22px] font-semibold">Donated to charity</h4>
               <h2 className="text-[36px] font-bold mt-3 flex flex-row items-center justify-center">
-                £<NumberCounter end={305} start={100} duration={3} />K
+                £<NumberCounter endValue={305} duration={4000} />K
               </h2>
             </div>
           </div>

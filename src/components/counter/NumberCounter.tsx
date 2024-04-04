@@ -1,47 +1,35 @@
-"use client";
-import { useState, useEffect, useRef } from 'react';
-import { animated, useSpring } from 'react-spring';
+"use client"
+import { useState } from "react";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 interface NumberCounterProps {
-  endValue: number;
+  end: number;
+  start?: number;
   duration?: number;
-  initialValue?: number; // Optional initial value
+  decimals?: number; // Specify that decimals is an optional prop
 }
 
-const NumberCounter: React.FC<NumberCounterProps> = ({ endValue, duration = 3000, initialValue = 0 }) => {
-  const [startValue, setStartValue] = useState<number>(initialValue);
+const NumberCounter: React.FC<NumberCounterProps> = ({
+  end,
+  start = 0,
+  duration,
+  decimals = 0, // Provide a default value if necessary, or handle it being undefined in CountUp
+}) => {
+  const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    let intervalRef: ReturnType<typeof setInterval> | null = null;
+  const onEnterViewport = () => {
+    setVisible(true);
+  };
 
-    if (typeof window !== 'undefined') {
-      const step = (endValue - startValue) / (duration / 1000);
-      intervalRef = setInterval(() => {
-        setStartValue((prevValue) => {
-          if ((step > 0 && prevValue >= endValue) || (step < 0 && prevValue <= endValue)) {
-            clearInterval(intervalRef!);
-            return endValue;
-          }
-          return prevValue + step;
-        });
-      }, 1000);
-    }
-
-    return () => {
-      if (intervalRef) clearInterval(intervalRef);
-    };
-  }, [startValue, endValue, duration]);
-
-  const { number } = useSpring({
-    from: { number: startValue },
-    to: { number: endValue },
-    config: { duration },
-  });
+  const onExitViewport = () => {
+    setVisible(false);
+  };
 
   return (
-    <animated.div>
-      {number.to((val) => Math.floor(val))}
-    </animated.div>
+    <ScrollTrigger onEnter={onEnterViewport} onExit={onExitViewport}>
+      {visible && <CountUp start={start} end={end} duration={duration} decimals={decimals} />}
+    </ScrollTrigger>
   );
 };
 

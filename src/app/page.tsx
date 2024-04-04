@@ -33,7 +33,7 @@ export default function Home() {
       </section>
       <section className="py-[50px] bg" id="benefits">
         <div className="container">
-          <div className="w-full sm:w-[550px] m-auto mb-5">
+          <div className="w-full md:w-[550px] m-auto mb-5">
             <h2 className="text-[30px] sm:text-[36px] text-white text-center font-bold">
               Real Time Statistics
             </h2>
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
       <section className="py-[80px] relative overflow-hidden">
         <div className="container">
-          <div className="w-[550px] m-auto text-center">
+          <div className="m-auto text-center">
             <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
               Benefits
             </h2>
@@ -82,7 +82,7 @@ export default function Home() {
       </section>
       <section className="py-[80px] h-full relative bg overflow-hidden">
         <div className="container">
-          <div className="w-[550px] m-auto text-center">
+          <div className="w-full m-auto text-center">
             <h2 className="text-[30px] sm:text-[36px] md:text-[56px] mt-[-15px] md:mt-0 text-white text-center font-bold">
               Voices Of Clients
             </h2>

@@ -51,7 +51,6 @@ export default function Home() {
                   duration={3}
                   decimals={2}
                 />
-                million
               </h2>
             </div>
             <div className="text-center w-full h-full p-[40px] rounded-xl bg-[#242732]">

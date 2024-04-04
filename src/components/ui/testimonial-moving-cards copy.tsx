@@ -1,5 +1,6 @@
+"use client";
 import { cn } from "@/utils/cn";
-import Image  from "next/image";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 interface TestimonialItem {
@@ -17,13 +18,13 @@ interface TestimonialMovingCardsProps {
   className?: string;
 }
 
-export const TestimonialMovingCards = ({
+export const TestimonialMovingCards: React.FC<TestimonialMovingCardsProps> = ({
   items,
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
   className,
-}: TestimonialMovingCardsProps) => {
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
 
@@ -38,7 +39,7 @@ export const TestimonialMovingCards = ({
 
     scrollerContent.forEach((item) => {
       const duplicatedItem = item.cloneNode(true);
-      scrollerRef.current?.appendChild(duplicatedItem);
+      if (scrollerRef.current) scrollerRef.current.appendChild(duplicatedItem);
     });
 
     getDirection();
@@ -80,13 +81,13 @@ export const TestimonialMovingCards = ({
         className={cn(
           "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           containerRef.current && scrollerRef.current ? "animate-scroll" : "",
-          pauseOnHover && "hover:animate-none"
+          pauseOnHover ? "hover:animate-none" : ""
         )}
       >
         {items.map((item, idx) => (
           <li
             className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-[#242732]"
-            key={item.name}
+            key={item.name + idx} // Added idx to ensure unique key
           >
             <blockquote>
               <Image

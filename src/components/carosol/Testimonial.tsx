@@ -1,10 +1,11 @@
 "use client";
-import { TestimonialMovingCards } from "@/components/ui/testimonial-moving-cards";
+import React, { useEffect, useState } from "react";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function Testimonial() {
   return (
-    <div className="h-full rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-      <TestimonialMovingCards
+    <div className="flex flex-col antialiased items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
         items={testimonials}
         direction="right"
         speed="slow"
@@ -53,28 +54,28 @@ const testimonials = [
       "I was in trouble with debt, creditup have helped me with this and I’m now more comfortable with my finances. Credit up has helped both my debt and mental health. Thank you! ",
     name: "Susan Stanley",
     title: "Leeds",
-    img: "/img/client/client1.png",
+    img: "/img/client/client2.png",
   },
   {
     quote:
       "Amazing service! Once I signed up a paralegal called me and helped me with the set up. No judgment at all and very thorough.",
     name: "Rickell Gibb",
     title: "Plymouth",
-    img: "/img/client/client1.png",
+    img: "/img/client/client3.png",
   },
   {
     quote:
       "Very helpful, having a paralegal on speed dial whenever I needed help or questions answered was truly refreshing. ",
     name: "Violet Fenton",
     title: "Kent",
-    img: "/img/client/client1.png",
+    img: "/img/client/client2.png",
   },
   {
     quote:
       "So happy with my experience with creditup so far. They made my experience so easy and I couldn't recommend them enough.",
     name: "Emma Watson",
     title: "Chichester",
-    img: "/img/client/client1.png",
+    img: "/img/client/client3.png",
   },
   {
     quote:

@@ -3,7 +3,6 @@ import { HeroBanner } from "@/components/banner/HereBanner";
 import { CardHoverEffect } from "@/components/card/CardHoverEffect";
 import { Testimonial } from "@/components/carosol/Testimonial";
 import NumberCounter from "@/components/counter/NumberCounter";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,24 +11,6 @@ export default function Home() {
         <div className="container">
           <HeroBanner />
         </div>
-        { /*<div className="absolute left-[-35%] top-0 -z-40">
-          <Image
-            src={`/svg/ex_bg.svg`}
-            alt="hero"
-            height={720}
-            width={950}
-            draggable={false}
-          />
-        </div>
-        <div className="absolute right-[-35%] top-0 -z-40">
-          <Image
-            src={`/svg/ex_bg.svg`}
-            alt="hero"
-            height={720}
-            width={950}
-            draggable={false}
-          /> 
-          </div>*/}
       </section>
       <section className="py-[50px] bg" id="benefits">
         <div className="container">
